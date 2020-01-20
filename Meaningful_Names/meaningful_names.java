@@ -28,11 +28,11 @@ public List<Cell> getFlaggedCells() {
 
 // --------- Make meaningful distinction. ---------
 
-// Refactore all the variables and functions' name to add meaningful distinctions 
+/* CORRECTION */
 
-public static void copyChars (char a1[], char a2[]) {
-  for (int i = 0; i < a1.lenght; i++) {
-    a2[i] = a1[i];
+public static void copyChars (char origin[], char destination[]) {
+  for (int i = 0; i < origin.lenght; i++) {
+    destination[i] = origin[i];
   }
 }
 
