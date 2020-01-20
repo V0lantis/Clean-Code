@@ -2,19 +2,29 @@
 
 // --------- Choose descriptive and unambiguous names. ---------
 
-// Refactore all the variables and functions' names to remove comments 
-// And remove an ambiguity
+/* CORRECTION */
 
-int d; //  elapsed time in days
+int elapsedTimeInDays; // ALSO ACCEPTED : daysSinceCreation | daysSinceModification | fileAgeInDays
 
-public List<int[]> getThem() {
-  List<int[]> list1 = new ArrayList<int[]>();
+public List<int[]> getFlaggedCells() {
+  List<int[]> flaggedCells = new ArrayList<int[]>();
 
-  for (int[] x: theList)
-    if (x[0] == 4)
-      list1.add(x);
-  return list1
+  for (int[] cell: gameBoard)
+    if (cell[STATUS_VALUE] == FLAGGED)
+      flaggedCells.add(cell);
+  return flaggedCells;
 }
+
+/* ----------- OR ------------ */
+public List<Cell> getFlaggedCells() {
+  List<Cell> flaggedCells = new ArrayList<Cell>();
+
+  for (Cell cell: gameBoard)
+    if (cell.isFlagged())
+      flaggedCells.add(cell);
+  return flaggedCells;
+}
+
 
 // --------- Make meaningful distinction. ---------
 
