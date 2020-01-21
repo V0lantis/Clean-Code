@@ -40,11 +40,10 @@ public static void copyChars (char origin[], char destination[]) {
 
 /* Refactore all the variables and functions' name to add  pronounceable names */
 
-class DtaRcrd102 {
-	private Date genymdhms;
+class Customer {
+	private Date generationTimestamp;
 	/* ... */
 }
-
 
 // --------- Use searchable names. ---------
 // --------- Replace magic numbers with named constants. ---------
