@@ -28,7 +28,7 @@ public static void copyChars (char a1[], char a2[]) {
 
 // --------- Use pronounceable names. ---------
 
-/* Refactore all the variables and functions' name to add  pronounceable names */
+// Refactore all the variables and functions' name to add  pronounceable names 
 
 class DtaRcrd102 {
 	private Date genymdhms;
@@ -37,11 +37,35 @@ class DtaRcrd102 {
 
 // --------- Use searchable names. ---------
 
-/* Refactore all the variables and functions' name to add  searchable names */
+// Refactore all the variables and functions' name to add  searchable names 
 
 for (int j=0; j<34; j++) {
 	s += (t[j]*4)/5;
 }
 
-// --------- Replace magic numbers with named constants. ---------
-// --------- Avoid encodings.  ---------
+// --------- Add Meaningful Context --------- 
+
+// Refactore all the variables and functions' name to add Meaningful Context
+
+private void printGuessStatistics(char candidate, int count) {
+  String number;
+  String verb;
+  String pluralModifier;
+  if (count == 0) {
+    number = "no";
+    verb = "are";
+    pluralModifier = "s";
+  } else if (count == 1) {
+    number = "1";
+    verb = "is";
+    pluralModifier = "";
+  } else {
+    number = Integer.toString(count);
+    verb = "are";
+    pluralModifier = "s";
+  }
+  String guessMessage = String.format(
+    "There %s %s %s%s", verb, number, candidate, pluralModifier
+  );
+  print(guessMessage);
+}
