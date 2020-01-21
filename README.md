@@ -7,6 +7,10 @@ The dirty code will be localised on the branch `master`, and the correction will
 and then to begin to try refactoring the dirty code, and comparing with the `answer` branch (on CLI, it is `git diff master:path/file.c answer:path/file.c) and on VS Code,
 you install the gitlens extension, which allow you to compare two branches together.
 
-## File format & main architecture of language
+## Files' format & main architecture of languages
 
-It is not important that every files follow the exact architecture associated with the language, e.g. every file .c doesn't have to begin with an `#include` and a `int maint()`function. Concepts are more important. Clean clode is independent of the language.
+It is not important that every files follow the exact architecture associated with the language, e.g. every file .c doesn't have to begin with an `#include` and a `int maint()` function. Concepts are more important. Clean clode is independent of the language.
+
+## Contributing
+
+Contributing is highly appreciated. I started with Clean Code's book sample, and I'll add all codes that I've seen or think.
