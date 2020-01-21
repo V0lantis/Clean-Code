@@ -58,5 +58,48 @@ for (int j=0; j < NUMBER_OF_TASKS; j++) {
 	sum += realTaskWeeks;
 }
 
-// --------- Replace magic numbers with named constants. ---------
-// --------- Avoid encodings.  ---------
+// --------- Add Meaningful Context --------- 
+
+// CORRECTION
+
+private class GuessStaticMessage {
+  private String number;
+  private String verb;
+  private String pluralModifier;
+  
+  public String make(char candidate, int count) {
+    createPluralDependentMessageParts(count);
+    return String.format(
+      "There %s %s %s%s",
+      verb, number, candidate, pluralModifier );
+  }
+
+  private void createPluralDependentMessageParts(int count) {
+    if (count == 0) {
+      thereAreNoLetters();
+    } else if (count == 1) {
+      thereIsOneLetter();
+    } else {
+      thereAreManyLetters(count);
+    }
+  }
+
+  private void thereAreNoLetters() {
+    number = "no";
+    verb = "are";
+    pluralModifier = "s";
+  }
+
+  private void thereIsOneLetter() {
+    number = "1";
+    verb = "is";
+    pluralModifier = "";
+  }
+
+  private void thereAreManyLetters(count) {
+    number = Integer.toString(count);
+    verb = "are";
+    pluralModifier = "s";
+  }
+}
+
