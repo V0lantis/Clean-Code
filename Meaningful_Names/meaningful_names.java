@@ -35,7 +35,13 @@ class DtaRcrd102 {
 	/* ... */
 }
 
-
 // --------- Use searchable names. ---------
+
+/* Refactore all the variables and functions' name to add  searchable names */
+
+for (int j=0; j<34; j++) {
+	s += (t[j]*4)/5;
+}
+
 // --------- Replace magic numbers with named constants. ---------
 // --------- Avoid encodings.  ---------
