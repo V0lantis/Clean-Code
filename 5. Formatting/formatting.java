@@ -18,3 +18,44 @@ public class ReporterConfig {
     m_properties.add(property);
  }
 }
+
+// --------- Instance variables ---------
+
+// TODO: Refactore in order to increase readability
+// All variables should be declared at the top of the class. Everybody should know 
+// where to go to see the declaration
+
+public class TestSuite implements Test {
+  static public Test createTest(Class << ? extends TestCase > theClass,
+      String name) {
+       //...
+  }
+
+  public static Constructor <? extends TestCase >
+  getTestConstructor(Class << ? extends TestCase > theClass)
+  throws NoSuchMethodException {  
+    //...
+  }
+
+  public static Test warning(final String message) {  
+    //...
+  }
+
+  private static String exceptionToString(Throwable t) {  
+    //...
+  }
+
+  private String fName;
+  private Vector <Test> fTests = new Vector <Test>(10);
+
+  public TestSuite() {}
+
+  public TestSuite(final Class << ? extends TestCase > theClass) {  
+    //...
+  }
+
+  public TestSuite(Class << ? extends TestCase > theClass, String name){  
+    //...
+  } 
+  //...............
+}
