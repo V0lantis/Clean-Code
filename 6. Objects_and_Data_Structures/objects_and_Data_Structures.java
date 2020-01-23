@@ -6,3 +6,7 @@ public interface Vehicule {
   double getFuelTankCapacityInGallons();
   double getGallonsOfGasoline();
 }
+
+// Law of Demeter : Refactore the following code in order to respect the Law of Demeter:
+
+final String outputDir = ctxt.getOptions().getScratchDir().getAbsolutePath();
